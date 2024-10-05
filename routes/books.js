@@ -1,9 +1,24 @@
 const express = require('express');
+
 const router = express.Router();
 
 let books = [
-  { id: 1, title: 'Book One', author: 'Author One', description: 'Description One', price: 10.99, image: 'images/book1.jpg' },
-  { id: 2, title: 'Book Two', author: 'Author Two', description: 'Description Two', price: 12.99, image: 'images/book2.jpg' },
+  { 
+    id: 1, 
+    title: 'Book One', 
+    author: 'Author One', 
+    description: 'Description One', 
+    price: 10.99, 
+    image: 'images/book1.jpg' 
+  },
+  { 
+    id: 2, 
+    title: 'Book Two', 
+    author: 'Author Two', 
+    description: 'Description Two', 
+    price: 12.99, 
+    image: 'images/book2.jpg' 
+  },
 ];
 
 // GET all books
@@ -20,7 +35,7 @@ router.post('/', (req, res) => {
 
 // PUT update book
 router.put('/:id', (req, res) => {
-  const bookId = parseInt(req.params.id);
+  const bookId = parseInt(req.params.id, 10);  // Added radix parameter
   const updatedBook = req.body;
   books = books.map((book) => (book.id === bookId ? { ...book, ...updatedBook } : book));
   res.json(updatedBook);
@@ -28,7 +43,7 @@ router.put('/:id', (req, res) => {
 
 // DELETE book
 router.delete('/:id', (req, res) => {
-  const bookId = parseInt(req.params.id);
+  const bookId = parseInt(req.params.id, 10);  // Added radix parameter
   books = books.filter((book) => book.id !== bookId);
   res.json({ message: 'Book deleted' });
 });
