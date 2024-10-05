@@ -1,0 +1,110 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5rem;
+}
+
+span {
+  color: rgb(231, 233, 94);
+}
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #baaa1c;
+}
+
+h2 span {
+  color: #ff6347; /* Tomato color for emphasis */
+}
+
+p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+}
+
+/* Book List Styles */
+#book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card Styles */
+.book-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.book-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.book-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.book-card p {
+  margin: 10px 0;
+}
+
+/* Price Styles */
+.book-card .price {
+  font-size: 1.3rem;
+  color: #007bff; /* Bootstrap primary color */
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .book-card {
+      width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 2rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .book-card {
+      margin: 10px 0;
+  }
+}
