@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const booksRoute = require('./routes/books');  // Grouped with other requires
+const booksRoute = require('./routes/books');
 
 const app = express();
 const PORT = 3000;
